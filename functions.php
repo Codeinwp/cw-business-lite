@@ -88,7 +88,7 @@ function cw_business_lite_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'metrox' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'cw-business-lite' ), max( $paged, $page ) );
 
 	return $title;
 }
