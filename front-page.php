@@ -6,6 +6,40 @@
  */
 get_header();
 
+
+if ( get_option( 'show_on_front' ) == 'page' ): ?>
+  			<section id="features-two">
+				<div class="wrap">
+					<h3>
+						<?php the_title(); ?>
+					</h3><!--/h3-->
+				</div><!--/div .wrapper-->
+			</section><!--/section .wide-nav-->
+			<div class="wrap cf">
+				<div class="content-left">
+					<div class="front-page-article">
+						<?php
+							if ( have_posts() ) : while ( have_posts() ) : the_post();
+							
+						?>
+						
+								<?php the_content(); ?>
+							
+						<?php endwhile; ?>
+							
+						<?php endif; ?>
+					
+					
+					</div>
+				</div>	
+				<?php get_sidebar(); ?>
+			</div><!--/div .wrapper-->
+		
+<?php		
+else:
+
+
+
 get_template_part( 'includes/subheader' ); ?>
 <section id="features-two">
 	<div class="wrap">
@@ -141,4 +175,6 @@ get_template_part( 'includes/subheader' ); ?>
 		</div><!--/.our-clients-->
 	</section><!--/.content-->
 </div><!--/.wrap-->
+
+<?php endif; ?>
 <?php get_footer(); ?>

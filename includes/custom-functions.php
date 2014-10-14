@@ -18,7 +18,7 @@ function cw_business_lite_excerpt_limit($limit) {
 /**
  *	Comments List
  */
-if ( ! function_exists( 'comments_list' ) ) :
+if ( ! function_exists( 'cw_business_lite_comments_list' ) ) :
 /**
  * Template for comments and pingbacks.
  *
@@ -26,7 +26,7 @@ if ( ! function_exists( 'comments_list' ) ) :
  *
  * @since ti 1.0
  */
-function comments_list( $comment, $args, $depth ) {
+function cw_business_lite_comments_list( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
         case 'pingback' :

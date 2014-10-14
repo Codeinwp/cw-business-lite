@@ -31,7 +31,7 @@ if ( post_password_required() )
         <?php endif; // check for comment navigation ?>
 
         <div class="sss cf">
-            <?php wp_list_comments( array( 'callback' => 'comments_list' ) ); ?>
+            <?php wp_list_comments( array( 'callback' => 'cw_business_lite_comments_list' ) ); ?>
         </div><!--/div .comments-list .cf-->
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through? If so, show navigation ?>

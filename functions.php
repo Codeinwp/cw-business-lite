@@ -93,3 +93,8 @@ function cw_business_lite_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'cw_business_lite_wp_title', 10, 2 ); 
+
+function cw_business_lite_add_editor_styles() {
+    add_editor_style( '/css/custom-editor-style.css' );
+}
+add_action( 'init', 'cw_business_lite_add_editor_styles' );
