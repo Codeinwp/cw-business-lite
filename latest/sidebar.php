@@ -10,7 +10,10 @@
 		if ( is_active_sidebar( 'general_sidebar' ) ) {
 			dynamic_sidebar( 'general_sidebar' );
 		} else {
-			echo 'The sidebar is not active.';
+			
+					?> <div class="footer-one-widget"> <?php the_widget ("WP_Widget_Calendar") ; ?> </div> <?php
+					?> <div class="footer-one-widget"> <?php the_widget ("WP_Widget_Meta") ; ?> </div> <?php
+					?> <div class="footer-one-widget"> <?php the_widget ("WP_Widget_Tag_Cloud") ; ?> </div> <?php
 		}
 	?>
 </div><!--/.sidebar-->

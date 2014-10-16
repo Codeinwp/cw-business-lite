@@ -8,7 +8,7 @@ License: GNU General Public License v3
 License URI: license.txt
 Tags: white, yellow, light, black, dark, one-column, two-columns, right-sidebar, custom-menu, featured-images, post-formats, sticky-post, translation-ready, responsive-layout, custom-colors, editor-style, full-width-template, theme-options, threaded-comments
 Text Domain: cw-business-lite
-Version: 1.2.5
+Version: 1.2.1
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1419,7 +1419,7 @@ footer {
   display: inline;
 }
 /* line 1284, sass/style.scss */
-.content-left article .post-entry , .front-page-article{
+.content-left article .post-entry {
   width: 100%;
   margin-top: 15px;
   color: #a8a8a8;
@@ -1904,10 +1904,6 @@ footer {
   text-decoration: underline;
 }
 
-.widget ul.children, .widget ul.sub-menu, .widget ul.submenu, .footer-one-widget  ul.children, 
-.footer-one-widget ul.sub-menu, .footer-one-widget ul.submenu {
-	margin-left:10px;
-}
 /*
 **	3.3 Single
 */
@@ -1929,9 +1925,13 @@ footer {
 /* line 1775, sass/style.scss */
 #single .single-featured-image {
   width: 100%;
+  height: 400px;
   overflow: hidden;
 }
-
+/* line 1780, sass/style.scss */
+#single .single-featured-image img {
+  width: 100%;
+}
 /* line 1787, sass/style.scss */
 #single .post-password-form #pwbox-131 {
   -webkit-box-sizing: border-box;
@@ -2890,13 +2890,7 @@ dl.gallery-columns-9 .wp-caption-text {
 .comments-list .comments-list-meta .comment-reply-link:hover {
   text-decoration: underline;
 }
-.comment {
-	list-style-type:none;
-}
-.pingback {
-	list-style-type:none;
-	padding: 20px 0px 20px 0px;
-}
+
 /* line 2687, sass/style.scss */
 #respond {
   width: 100%;
@@ -4451,13 +4445,4 @@ float: left;
 	display:block; 
 	margin-left:auto;
 	margin-right:auto;
-}
-ul .cat-item > ul.children > li {
-	list-style:circle inside;
-}
-ul .cat-item > ul.children > li > ul  > li  {
-	list-style:disc inside;
-}
-.cat-item .children {
-	margin-left:10px;
 }

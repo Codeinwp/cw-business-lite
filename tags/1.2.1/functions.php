@@ -88,13 +88,8 @@ function cw_business_lite_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'cw-business-lite' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'metrox' ), max( $paged, $page ) );
 
 	return $title;
 }
 add_filter( 'wp_title', 'cw_business_lite_wp_title', 10, 2 ); 
-
-function cw_business_lite_add_editor_styles() {
-    add_editor_style( '/css/custom-editor-style.css' );
-}
-add_action( 'init', 'cw_business_lite_add_editor_styles' );
