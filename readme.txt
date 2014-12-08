@@ -5,8 +5,7 @@ Requires at least:	3.3.0
 Tested up to:		4.0
 CW Business
 == Description ==
-Clean and modern free business theme, built with responsive design in mind using latest css/html techniques, CW Business let you easily build a responsive wordpress site for your business.
-
+Clean and modern free business theme, built with responsive design in mind using latest css/html techniques, CW Business let you easily build a responsive wordpress site for your business. <a href="https://themeisle.com/forums/forum/cw-business-lite">Official support forum</a> (https://themeisle.com/forums/forum/cw-business-lite).
 = License =
 CW Business Lite WordPress theme, Copyright (C) 2014 ThemeIsle.com
 CW Business Lite WordPress theme is licensed under the GPL3.

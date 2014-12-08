@@ -33,7 +33,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Header - Subtitle */
-		$wp_customize->add_setting( 'cw_business_lite_header_subtitle', array('sanitize_callback' => 'esc_html','default' => '+0-123-456-789') );
+		$wp_customize->add_setting( 'cw_business_lite_header_subtitle', array('sanitize_callback' => 'esc_html','default' => __('+0-123-456-789','cw-business-lite')) );
 		$wp_customize->add_control( 'cw_business_lite_header_subtitle', array(
 		    'label'    => __( 'Contact telephone:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_header',
@@ -184,7 +184,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		);
 
 		/* Front Page - The Content - Title */
-		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_title', array('sanitize_callback' => 'esc_html','default' => 'Lorem ipsum dolor sit amet et consectetuer adipiscing') );
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_title', array('sanitize_callback' => 'esc_html','default' => __('Lorem ipsum dolor sit amet et consectetuer adipiscing','cw-business-lite')) );
 		$wp_customize->add_control( 'cw_business_lite_frontpage_thecontent_title', array(
 		    'label'    => __( 'The Content - Title:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_frontpage',
@@ -193,7 +193,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Front Page - The Content - Content */
-		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_content', array('sanitize_callback' => 'esc_html','default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.') );
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_content', array('sanitize_callback' => 'esc_html','default' => __('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.','cw-business-lite')) );
 		$wp_customize->add_control( new cw_business_lite_Textarea_Control( $wp_customize, 'cw_business_lite_frontpage_thecontent_content', array(
 		            'label' 	=> __( 'The Content - Content:', 'cw-business-lite' ),
 		            'section' 	=> 'cw_business_lite_frontpage',
@@ -343,7 +343,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		);
 
 		/* Contact - Sidebar - Phone */
-		$wp_customize->add_setting( 'cw_business_lite_contact_sidebar_phone', array('sanitize_callback' => 'esc_html','default' => '+1-888-587-8421') );
+		$wp_customize->add_setting( 'cw_business_lite_contact_sidebar_phone', array('sanitize_callback' => 'esc_html','default' => __('+1-888-587-8421','cw-business-lite')) );
 		$wp_customize->add_control( 'cw_business_lite_contact_sidebar_phone', array(
 		    'label'    => __( 'Sidebar - Phone:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_contact',
@@ -352,7 +352,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Contact - Sidebar - Website */
-		$wp_customize->add_setting( 'cw_business_lite_contact_sidebar_website', array('sanitize_callback' => 'esc_html','default' => '<a href="" title="Movatique">Movatique</a>') );
+		$wp_customize->add_setting( 'cw_business_lite_contact_sidebar_website', array('sanitize_callback' => 'esc_html','default' => __('<a href="https://themeisle.com/themes/cw-business-lite/" title="Movatique">Movatique</a>','cw-business-lite')) );
 		$wp_customize->add_control( 'cw_business_lite_contact_sidebar_website', array(
 		    'label'    => __( 'Sidebar - Website:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_contact',
@@ -361,7 +361,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Contact - Sidebar - Email */
-		$wp_customize->add_setting( 'cw_business_lite_contact_sidebar_email', array('sanitize_callback' => 'esc_html','default' => 'info@movatique') );
+		$wp_customize->add_setting( 'cw_business_lite_contact_sidebar_email', array('sanitize_callback' => 'esc_html','default' => __('info@movatique','cw-business-lite')) );
 		$wp_customize->add_control( 'cw_business_lite_contact_sidebar_email', array(
 		    'label'    => __( 'Sidebar - Email:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_contact',
@@ -417,6 +417,31 @@ function cw_business_lite_customizer( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'cw_business_lite_customizer' );
+
+
+/**
+
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+
+ */
+
+function cw_business_lite_customize_preview_js() {
+
+	wp_enqueue_script( 'cw_business_lite_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+
+}
+
+add_action( 'customize_preview_init', 'cw_business_lite_customize_preview_js' );
+
+function cw_business_lite_registers() {
+
+	wp_register_script( 'cw_business_lite_customizer_script', get_template_directory_uri() . '/js/cw_business_lite_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_enqueue_script( 'cw_business_lite_customizer_script' );
+
+}
+
+add_action( 'customize_controls_enqueue_scripts', 'cw_business_lite_registers' );
 
 if( class_exists( 'WP_Customize_Control' ) ):
 	class cw_business_lite_Textarea_Control extends WP_Customize_Control {

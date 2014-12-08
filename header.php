@@ -21,15 +21,15 @@
 						<span>
 							<?php
 
-							if ( get_theme_mod( 'cw_business_lite_header_title','Contact Us Now: ' ) ) {
-    							echo get_theme_mod( 'cw_business_lite_header_title','Contact Us Now: ' );
+							if ( get_theme_mod( 'cw_business_lite_header_title',__('Contact Us Now: ','cw-business-lite') ) ) {
+    							echo get_theme_mod( 'cw_business_lite_header_title',__('Contact Us Now: ','cw-business-lite') );
     						}
 
 							?>
 						</span>
 						<?php
-    						if ( get_theme_mod( 'cw_business_lite_header_subtitle','+0-123-456-789' ) ) { ?>
-                                <a href="tel: <?php echo get_theme_mod( 'cw_business_lite_header_subtitle','+0-123-456-789' ); ?>" title="<?php echo get_theme_mod( 'cw_business_lite_header_subtitle','+0-123-456-789' ); ?>"><?php echo get_theme_mod( 'cw_business_lite_header_subtitle','+0-123-456-789' ); ?></a>
+    						if ( get_theme_mod( 'cw_business_lite_header_subtitle',__('+0-123-456-789','cw-business-lite') ) ) { ?>
+                                <a href="tel: <?php echo get_theme_mod( 'cw_business_lite_header_subtitle',__('+0-123-456-789','cw-business-lite') ); ?>" title="<?php echo get_theme_mod( 'cw_business_lite_header_subtitle',__('+0-123-456-789','cw-business-lite') ); ?>"><?php echo get_theme_mod( 'cw_business_lite_header_subtitle',__('+0-123-456-789','cw-business-lite') ); ?></a>
     						<?php }
     					?>
 					</div><!--/.header-top-contact-->
@@ -76,7 +76,7 @@
 			</div><!--/.header-top-->
 			<div class="header-shadow">
 				<div class="wrap cf">
-					<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>" class="logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>" class="logo">
 						<?php
 						if ( get_theme_mod( 'cw_business_lite_header_logo' ) ) { ?>
 							<img src="<?php echo get_theme_mod( 'cw_business_lite_header_logo' ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />

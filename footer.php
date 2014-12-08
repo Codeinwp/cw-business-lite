@@ -22,7 +22,7 @@
 	<div class="footer-two cf">
 		<div class="wrap">
 			<p>
-				Copyright &copy; <a href="" title="Movatique">Movatique</a> is proudly powered by <a href="" title="WordPress">WordPress</a>. All rights reserved.
+				<?php _e('Copyright','cw-business-lite'); ?> &copy; <a href="https://themeisle.com/themes/cw-business-lite/" title="Movatique" target="_blank" rel="nofollow">Movatique</a> <?php _e('is proudly powered by','cw-business-lite'); ?> <a href="http://wordpress.org/" title="WordPress" target="_blank" rel="nofollow">WordPress</a>. <?php _e('All rights reserved.','cw-business-lite'); ?>
 			</p>
 		</div><!--/.wrap-->
 	</div><!--/.footer-two-->

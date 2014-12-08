@@ -1,6 +1,5 @@
 <?php
 
-
 function cw_business_lite_setup() {
     global $content_width;
     require_once ( 'includes/custom-functions.php' );

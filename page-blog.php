@@ -72,10 +72,10 @@ get_header();
 			wp_reset_postdata();
 		?><div class="posts-navigation">
         <?php 	if ( get_previous_posts_link() )
-            printf( '<div class="posts-navigation-previous">%s</div>' . "\n", get_previous_posts_link( 'Previous' ) );
+            printf( '<div class="posts-navigation-previous">%s</div>' . "\n", get_previous_posts_link( __('Previous','cw-business-lite') ) );
         ?>
         <?php 	if ( get_next_posts_link() )
-            printf( '<div class="posts-navigation-next">%s</div>' . "\n", get_next_posts_link( 'Next' ) );
+            printf( '<div class="posts-navigation-next">%s</div>' . "\n", get_next_posts_link( __('Next','cw-business-lite') ) );
         ?></div>
 	</div><!--/.content-left-->
 	<?php get_sidebar(); ?>

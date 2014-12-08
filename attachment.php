@@ -22,7 +22,7 @@ get_header();
 
 				<?php }
 		} else {
-			echo '<p>No posts found.</p>';
+			echo '<p>'.__('No posts found.','cw-business-lite').'</p>';
 		}
 	?>
 

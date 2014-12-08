@@ -42,47 +42,47 @@ get_header();
 								<div class="contact-widget">
 									<div class="contact-widget-title">
 										<?php
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_title','More about us' ) ) {
-											echo get_theme_mod( 'cw_business_lite_contact_sidebar_title','More about us' );
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_title',__('More about us','cw-business-lite') ) ) {
+											echo get_theme_mod( 'cw_business_lite_contact_sidebar_title',__('More about us','cw-business-lite') );
 										}
 										?>
 									</div><!--/.contact-widget-title-->
 									<p>
 										<?php
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_address1','United States' ) ) {
-											echo get_theme_mod( 'cw_business_lite_contact_sidebar_address1','United States' ) . '<br />';
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_address1',__('United States','cw-business-lite') ) ) {
+											echo get_theme_mod( 'cw_business_lite_contact_sidebar_address1',__('United States','cw-business-lite') ) . '<br />';
 										}
 										
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_address2','New York' ) ) {
-											echo get_theme_mod( 'cw_business_lite_contact_sidebar_address2','New York' ) . '<br />';
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_address2',__('New York','cw-business-lite') ) ) {
+											echo get_theme_mod( 'cw_business_lite_contact_sidebar_address2',__('New York','cw-business-lite') ) . '<br />';
 										}
 					
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_address3','412 Broadway #2, New York, NY 10013' ) ) {
-											echo get_theme_mod( 'cw_business_lite_contact_sidebar_address3','412 Broadway #2, New York, NY 10013' );
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_address3',__('412 Broadway #2, New York, NY 10013','cw-business-lite') ) ) {
+											echo get_theme_mod( 'cw_business_lite_contact_sidebar_address3',__('412 Broadway #2, New York, NY 10013','cw-business-lite') );
 										}
 										?>
 									</p>
 									
 										<?php
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_content','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo ris nisi ut aliquip ex ea commodo consequat.' ) ) {
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_content',__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo ris nisi ut aliquip ex ea commodo consequat.','cw-business-lite') ) ) {
 											echo '<p>';
-												echo get_theme_mod( 'cw_business_lite_contact_sidebar_content','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo ris nisi ut aliquip ex ea commodo consequat.' );
+												echo get_theme_mod( 'cw_business_lite_contact_sidebar_content',__('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo ris nisi ut aliquip ex ea commodo consequat.','cw-business-lite') );
 											echo '</p>';
 										}
 										?>
 									
 									<p>
 										<?php
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_phone','+1-888-587-8421' ) ) { ?>
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_phone',__('+1-888-587-8421','cw-business-lite') ) ) { ?>
 
 											<span>
 												<b>
 													<?php _e( 'Phone: ', 'cw-business-lite' ); ?>
 												</b>
 												<?php
-												if ( get_theme_mod( 'cw_business_lite_contact_sidebar_phone','+1-888-587-8421' ) ) { ?>
-													<a href="tel:<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_phone','+1-888-587-8421' ); ?>" title="<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_phone','+1-888-587-8421' ); ?>">
-														<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_phone','+1-888-587-8421' ); ?>
+												if ( get_theme_mod( 'cw_business_lite_contact_sidebar_phone',__('+1-888-587-8421','cw-business-lite') ) ) { ?>
+													<a href="tel:<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_phone',__('+1-888-587-8421','cw-business-lite') ); ?>" title="<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_phone',__('+1-888-587-8421','cw-business-lite') ); ?>">
+														<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_phone',__('+1-888-587-8421','cw-business-lite') ); ?>
 													</a>
 												<?php }
 												?>
@@ -92,7 +92,7 @@ get_header();
 										?>
 
 										<?php
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_website','<a href="" title="Movatique">Movatique</a>' ) ) { ?>
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_website','<a href="https://themeisle.com/themes/cw-business-lite/" title="Movatique">Movatique</a>' ) ) { ?>
 
 											<span>
 												<b>
@@ -100,8 +100,8 @@ get_header();
 												</b>
 
 												<?php
-												if ( get_theme_mod( 'cw_business_lite_contact_sidebar_website','<a href="" title="Movatique">Movatique</a>' ) != false ) {
-													echo get_theme_mod( 'cw_business_lite_contact_sidebar_website','<a href="" title="Movatique">Movatique</a>' );
+												if ( get_theme_mod( 'cw_business_lite_contact_sidebar_website','<a href="https://themeisle.com/themes/cw-business-lite/" title="Movatique">Movatique</a>' ) != false ) {
+													echo get_theme_mod( 'cw_business_lite_contact_sidebar_website','<a href="https://themeisle.com/themes/cw-business-lite/" title="Movatique">Movatique</a>' );
 												}
 												?>
 											</span>
@@ -117,9 +117,9 @@ get_header();
 													<?php _e( 'E-mail: ','cw-business-lite' ); ?>
 												</b>
 												<?php
-												if ( get_theme_mod( 'cw_business_lite_contact_sidebar_email','info@movatique' ) ) { ?>
-													<a href="mailto:<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_email','info@movatique' ); ?>" title="<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_email','info@movatique' ); ?>">
-														<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_email','info@movatique' ); ?>
+												if ( get_theme_mod( 'cw_business_lite_contact_sidebar_email',__('info@movatique','cw-business-lite') ) ) { ?>
+													<a href="mailto:<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_email',__('info@movatique','cw-business-lite') ); ?>" title="<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_email',__('info@movatique','cw-business-lite') ); ?>">
+														<?php echo get_theme_mod( 'cw_business_lite_contact_sidebar_email',__('info@movatique','cw-business-lite') ); ?>
 													</a>
 												<?php }
 												?>
@@ -132,8 +132,8 @@ get_header();
 								<div class="contact-widget">
 									<div class="contact-widget-title">
 										<?php
-										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_socials_title','Our social network' ) ) {
-											echo get_theme_mod( 'cw_business_lite_contact_sidebar_socials_title','Our social network' );
+										if ( get_theme_mod( 'cw_business_lite_contact_sidebar_socials_title',__('Our social network','cw-business-lite') ) ) {
+											echo get_theme_mod( 'cw_business_lite_contact_sidebar_socials_title',__('Our social network','cw-business-lite') );
 										}
 										?>
 									</div><!--/.contact-widget-title-->
