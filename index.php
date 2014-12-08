@@ -61,11 +61,11 @@ get_header();
 			}
 		?>
         <?php if(get_next_posts_link() != null ) : ?>
-            <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+            <div class="nav-previous alignleft"><?php next_posts_link( __('Older posts','cw-business-lite') ); ?></div>
 
         <?php endif; ?>
         <?php if(get_previous_posts_link() != null ) : ?>
-            <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+            <div class="nav-next alignright"><?php previous_posts_link( __('Newer posts','cw-business-lite') ); ?></div>
         <?php endif; ?>
 	</div><!--/.content-left-->
 	<?php get_sidebar(); ?>

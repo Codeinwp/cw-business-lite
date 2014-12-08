@@ -69,12 +69,12 @@ if ( post_password_required() )
                 $url = '';
 
             $fields =  array(
-                'author' => '<div class="respond"><input class="input-full" placeholder="Full name (*)" name="author" type="text" value="' . $name . '" ' . $aria_req . ' />',
-                'email'  => '<input class="input-small-left" placeholder="E-mail address (*)" name="email" type="email" value="' . $email . '" ' . $aria_req . ' />',
-                'url'    => '<input class="input-small-right" placeholder="Website URL" name="url" type="url" value="' . $url . '" />'
+                'author' => '<div class="respond"><input class="input-full" placeholder="'.__('Full name (*)','cw-business-lite').'" name="author" type="text" value="' . $name . '" ' . $aria_req . ' />',
+                'email'  => '<input class="input-small-left" placeholder="'.__('E-mail address (*)','cw-business-lite').'" name="email" type="email" value="' . $email . '" ' . $aria_req . ' />',
+                'url'    => '<input class="input-small-right" placeholder="'.__('Website URL','cw-business-lite').'" name="url" type="url" value="' . $url . '" />'
             );
 
-            $comment_textarea = '<textarea placeholder="Your Message... (*)" class="input-textarea" name="comment" aria-required="true"></textarea></div>';
+            $comment_textarea = '<textarea placeholder="'.__('Your Message... (*)','cw-business-lite').'" class="input-textarea" name="comment" aria-required="true"></textarea></div>';
             comment_form( array( 'fields' => $fields, 'comment_field' => $comment_textarea, 'id_submit' => 'comments-submit-button', 'label_submit' => esc_attr__( 'Submit', 'cw-business-lite' ), 'title_reply' => '<div class="single-subtitle"><h5>' . esc_attr__( 'Leave a Reply' ,'cw-business-lite' ) . '</h5></div>', 'title_reply_to' => esc_attr__( 'Leave a comment to %s', 'cw-business-lite' )) );
 
     ?>
