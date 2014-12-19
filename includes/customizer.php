@@ -1,6 +1,14 @@
 <?php
 
 function cw_business_lite_customizer( $wp_customize ) {
+
+	class cw_business_lite_Theme_Support extends WP_Customize_Control
+	{
+		public function render_content()
+		{
+		}
+	} 
+
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -85,6 +93,57 @@ function cw_business_lite_customizer( $wp_customize ) {
 		    'settings' => 'cw_business_lite_header_contactform7_title',
 			'priority' => '7',
 		) );
+
+			/* services */
+	
+	$wp_customize->add_section( 'cw_business_lite_packages' , array(
+	
+		'title'      => __('Packages','cw-business-lite'),
+		'description' => __( "This feature is available in the pro version. <a href='https://themeisle.com/themes/movatique/' target='_blank'>Get it now!</a>",'cw-business-lite'),
+		'priority'   => 8,
+	));
+	$wp_customize->add_setting(
+        'cw_business_lite_packages',array('sanitize_callback' => 'cw_business_lite_sanitize_notes'));
+	
+	$wp_customize->add_control( new cw_business_lite_Theme_Support( $wp_customize, 'cw_business_lite_packages',
+	    array(
+	        'section' => 'cw_business_lite_packages',
+	   )
+	));
+	
+	/* custom colors */
+	
+	$wp_customize->add_section( 'cw_business_lite_custom_colors' , array(
+	
+		'title'      => __('Custom colors','cw-business-lite'),
+		'description' => __( "Change colors for the entire theme. This feature is available in the pro version. <a href='https://themeisle.com/themes/movatique/' target='_blank'>Get it now!</a>",'cw-business-lite'),
+		'priority'   => 9,
+	));
+	$wp_customize->add_setting(
+        'cw_business_lite_custom_colors',array('sanitize_callback' => 'cw_business_lite_sanitize_notes'));
+	
+	$wp_customize->add_control( new cw_business_lite_Theme_Support( $wp_customize, 'cw_business_lite_custom_colors',
+	    array(
+	        'section' => 'cw_business_lite_custom_colors',
+	   )
+	));
+	
+	/* Header image */
+	
+	$wp_customize->add_section( 'cw_business_lite_testimonials' , array(
+	
+		'title'      => __('Testimonials','cw-business-lite'),
+		'description' => __( "This feature is available in the pro version. <a href='https://themeisle.com/themes/movatique/' target='_blank'>Get it now!</a>",'cw-business-lite'),
+		'priority'   => 10,
+	));
+	$wp_customize->add_setting(
+        'cw_business_lite_testimonials',array('sanitize_callback' => 'cw_business_lite_sanitize_notes'));
+	
+	$wp_customize->add_control( new cw_business_lite_Theme_Support( $wp_customize, 'cw_business_lite_testimonials',
+	    array(
+	        'section' => 'cw_business_lite_testimonials',
+	   )
+	));
 
     /*
     ** Front Page Customizer
