@@ -241,6 +241,17 @@ function cw_business_lite_customizer( $wp_customize ) {
 		        )
 		    )
 		);
+		
+		/* Front Page - The Content - Image */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_image', array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/index-article-image.png') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_thecontent_image', array(
+		            'label' 	=> __( 'The Content - Image:', 'cw-business-lite' ),
+		            'section' 	=> 'cw_business_lite_frontpage',
+		            'settings' 	=> 'cw_business_lite_frontpage_thecontent_image',
+		            'priority' 	=> '10'
+		        )
+		    )
+		);
 
 		/* Front Page - The Content - Title */
 		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_title', array('sanitize_callback' => 'esc_html','default' => __('Lorem ipsum dolor sit amet et consectetuer adipiscing','cw-business-lite')) );
@@ -248,7 +259,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'The Content - Title:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_frontpage',
 		    'settings' => 'cw_business_lite_frontpage_thecontent_title',
-			'priority' => '10',
+			'priority' => '11',
 		) );
 
 		/* Front Page - The Content - Content */
@@ -257,7 +268,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		            'label' 	=> __( 'The Content - Content:', 'cw-business-lite' ),
 		            'section' 	=> 'cw_business_lite_frontpage',
 		            'settings' 	=> 'cw_business_lite_frontpage_thecontent_content',
-		            'priority' 	=> '11'
+		            'priority' 	=> '12'
 		        )
 		    )
 		);

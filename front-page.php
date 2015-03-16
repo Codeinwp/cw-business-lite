@@ -102,9 +102,15 @@ get_template_part( 'includes/subheader' ); ?>
 </section><!--/#features-two-->
 <div class="wrap">
 	<article id="content-article">
-		<div class="content-article-image">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/index-article-image.png" alt="Index Article Image" title="Index Article Image" />
-		</div><!--/.content-article-image-->
+		<?php
+			$cw_business_lite_frontpage_thecontent_image = get_theme_mod('cw_business_lite_frontpage_thecontent_image', get_template_directory_uri().'/images/index-article-image.png');
+			if( !empty($cw_business_lite_frontpage_thecontent_image) ):
+				echo '<div class="content-article-image">';
+					echo '<img src="'.$cw_business_lite_frontpage_thecontent_image.'" alt="Index Article Image" title="Index Article Image" />';
+				echo '</div>';
+			endif;
+		?>
+		
 		<h2>
 			<?php
 			if ( get_theme_mod( 'cw_business_lite_frontpage_thecontent_title',__('Lorem ipsum dolor sit amet et consectetuer adipiscing','cw-business-lite') ) ) {
@@ -121,6 +127,7 @@ get_template_part( 'includes/subheader' ); ?>
 		</p>
 	</article><!--/#content-article-->
 </div><!--/.wrap-->
+<div class="clearfix"></div>
 <div class="wrap">
 
 	<section class="content">
