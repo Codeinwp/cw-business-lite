@@ -20,3 +20,5 @@ Copyright: Copyright (c) 2013 Fred Heusschen
 Roboto font
 License: Distributed under the terms of Apache License ( http://www.apache.org/licenses/LICENSE-2.0 )
 Copyright: Christian Robertson
+
+* Screenshot image source: https://download.unsplash.com/3/doctype-hi-res.jpg
