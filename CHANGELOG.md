@@ -1,5 +1,13 @@
 
 
+### 1.3.3 - 27/04/2015
+
+ Changes: 
+
+
+ * Fixed #6, added a Leave us a review button, escaped url variables and other small improvements
+
+
 ### 1.3.2 - 19/04/2015
 
  Changes: 
