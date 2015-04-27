@@ -80,12 +80,6 @@ function cw_business_lite_required_plugins() {
      */
     $plugins = array(
 
-        // This is an example of how to include a plugin from the WordPress Plugin Repository
-        array(
-            'name'      => 'Tweet Old Post',
-            'slug'      => 'tweet-old-post',
-            'required'  => false,
-        ),
         array(
             'name'      => 'Contact Form 7',
             'slug'      => 'contact-form-7',
