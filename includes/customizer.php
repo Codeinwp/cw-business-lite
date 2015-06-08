@@ -94,13 +94,13 @@ function cw_business_lite_customizer( $wp_customize ) {
 			'priority' => '7',
 		) );
 
-			/* services */
+	
+	/* Packages */
 	
 	$wp_customize->add_section( 'cw_business_lite_packages' , array(
-	
 		'title'      => __('Packages','cw-business-lite'),
 		'description' => __( "This feature is available in the pro version. <a href='https://themeisle.com/themes/movatique/' target='_blank'>Get it now!</a>",'cw-business-lite'),
-		'priority'   => 8,
+		'priority'   => 500,
 	));
 	$wp_customize->add_setting(
         'cw_business_lite_packages',array('sanitize_callback' => 'cw_business_lite_sanitize_notes'));
@@ -117,7 +117,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 	
 		'title'      => __('Custom colors','cw-business-lite'),
 		'description' => __( "Change colors for the entire theme. This feature is available in the pro version. <a href='https://themeisle.com/themes/movatique/' target='_blank'>Get it now!</a>",'cw-business-lite'),
-		'priority'   => 9,
+		'priority'   => 501,
 	));
 	$wp_customize->add_setting(
         'cw_business_lite_custom_colors',array('sanitize_callback' => 'cw_business_lite_sanitize_notes'));
@@ -134,7 +134,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 	
 		'title'      => __('Testimonials','cw-business-lite'),
 		'description' => __( "This feature is available in the pro version. <a href='https://themeisle.com/themes/movatique/' target='_blank'>Get it now!</a>",'cw-business-lite'),
-		'priority'   => 10,
+		'priority'   => 502,
 	));
 	$wp_customize->add_setting(
         'cw_business_lite_testimonials',array('sanitize_callback' => 'cw_business_lite_sanitize_notes'));
@@ -145,13 +145,241 @@ function cw_business_lite_customizer( $wp_customize ) {
 	   )
 	));
 
-    /*
-    ** Front Page Customizer
-    */
-    $wp_customize->add_section( 'cw_business_lite_frontpage' , array(
-    	'title'       => __( 'Front Page', 'cw-business-lite' ),
-    	'priority'    => 250,
-	) );
+    /********************************/
+    /***      Front Page         ****/
+    /********************************/
+	
+	if ( class_exists( 'WP_Customize_Panel' ) ):
+	
+		$wp_customize->add_panel( 'cw_business_lite_frontpage_panel', array(
+			'priority' => 40,
+			'capability' => 'edit_theme_options',
+			'theme_supports' => '',
+			'title' => __( 'Front Page', 'cw-business-lite' )
+		) );
+	
+		/** Subheader **/
+		
+		$wp_customize->add_section( 'cw_business_lite_subheader_section' , array(
+			'title'       => __( 'Subheader', 'cw-business-lite' ),
+			'priority'    => 1,
+			'panel' => 'cw_business_lite_frontpage_panel'
+		) );
+
+		/* Subheader Title */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_header_title', array('sanitize_callback' => 'esc_html','default' => __( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'cw-business-lite' )) );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_header_title', array(
+		    'label'    => __( 'Subheader Title:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_subheader_section',
+		    'settings' => 'cw_business_lite_frontpage_header_title',
+			'priority' => 1,
+		) );
+
+		/* SubHeader Content */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_header_content' , array('sanitize_callback' => 'esc_html','default' => __( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Duis autem vel eum iriure it dolor in hendrerit in.Ut wisi enim ad minim veniam. Duis autem vel eum iriure it.', 'cw-business-lite')));
+		$wp_customize->add_control( new cw_business_lite_Textarea_Control( $wp_customize, 'cw_business_lite_frontpage_header_content', array(
+		            'label' 	=> __( 'Subheader Content:', 'cw-business-lite' ),
+		            'section' 	=> 'cw_business_lite_subheader_section',
+		            'settings' 	=> 'cw_business_lite_frontpage_header_content',
+		            'priority' 	=> 2
+		        )
+		    )
+		);
+
+		/** Features **/
+		
+		$wp_customize->add_section( 'cw_business_lite_features_section' , array(
+			'title'       => __( 'Features', 'cw-business-lite' ),
+			'priority'    => 2,
+			'panel' => 'cw_business_lite_frontpage_panel'
+		) );
+		
+		/* Features title */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_subheader_title', array('sanitize_callback' => 'esc_html','default' => __( 'Why Choose Us?', 'cw-business-lite' )) );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_subheader_title', array(
+		    'label'    => __( 'Features Title:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_features_section',
+		    'settings' => 'cw_business_lite_frontpage_subheader_title',
+			'priority' => 1,
+		) );
+
+		/* Features - Firstly Box - Title */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_firstlybox_title', array('sanitize_callback' => 'esc_html','default' => __( 'Fast &amp; Safe', 'cw-business-lite' )) );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_firstlybox_title', array(
+		    'label'    => __( 'Features Box (first) - Title:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_features_section',
+		    'settings' => 'cw_business_lite_frontpage_firstlybox_title',
+			'priority' => 2,
+		) );
+
+		/* Features - Firstly Box - Image */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_firstlybox_image', array('sanitize_callback' => 'esc_url_raw') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_firstlybox_image', array(
+		            'label' 	=> __( 'Features Box (first) - Image:', 'cw-business-lite' ),
+		            'section' 	=> 'cw_business_lite_features_section',
+		            'settings' 	=> 'cw_business_lite_frontpage_firstlybox_image',
+		            'priority' 	=> 3
+		        )
+		    )
+		);
+
+		/* Features - Secondly Box - Title */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_secondlybox_title', array('sanitize_callback' => 'esc_html', 'default' => __( '24/ 7 Support', 'cw-business-lite' )) );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_secondlybox_title', array(
+		    'label'    => __( 'Features Box (two) - Title:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_features_section',
+		    'settings' => 'cw_business_lite_frontpage_secondlybox_title',
+			'priority' => 4,
+		) );
+
+		/* Features - Secondly Box - Image */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_secondlybox_image', array('sanitize_callback' => 'esc_url_raw') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_secondlybox_image', array(
+		            'label' 	=> __( 'Features Box (two) - Image:', 'cw-business-lite' ),
+		            'section' 	=> 'cw_business_lite_features_section',
+		            'settings' 	=> 'cw_business_lite_frontpage_secondlybox_image',
+		            'priority' 	=> 5
+		        )
+		    )
+		);
+
+		/* Features - Thirdly Box - Title */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thirdlybox_title', array('sanitize_callback' => 'esc_html','default' => __( '100% Satisfaction', 'cw-business-lite' )) );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_thirdlybox_title', array(
+		    'label'    => __( 'Features Box (three) - Title:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_features_section',
+		    'settings' => 'cw_business_lite_frontpage_thirdlybox_title',
+			'priority' => 6,
+		) );
+
+		/* Features - Thirdly Box - Image */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thirdlybox_image', array('sanitize_callback' => 'esc_url_raw') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_thirdlybox_image', array(
+		            'label' 	=> __( 'Features Box (three) - Image:', 'cw-business-lite' ),
+		            'section' 	=> 'cw_business_lite_features_section',
+		            'settings' 	=> 'cw_business_lite_frontpage_thirdlybox_image',
+		            'priority' 	=> 7
+		        )
+		    )
+		);
+		
+		/** Main content **/
+		
+		$wp_customize->add_section( 'cw_business_lite_main_content_section' , array(
+			'title'       => __( 'Main content', 'cw-business-lite' ),
+			'priority'    => 3,
+			'panel' => 'cw_business_lite_frontpage_panel'
+		) );
+		
+		/* Main Content - Image */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_image', array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/index-article-image.png') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_thecontent_image', array(
+		            'label' 	=> __( 'Image:', 'cw-business-lite' ),
+		            'section' 	=> 'cw_business_lite_main_content_section',
+		            'settings' 	=> 'cw_business_lite_frontpage_thecontent_image',
+		            'priority' 	=> 1
+		        )
+		    )
+		);
+
+		/* Main Content - Title */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_title', array('sanitize_callback' => 'esc_html','default' => __('Lorem ipsum dolor sit amet et consectetuer adipiscing','cw-business-lite')) );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_thecontent_title', array(
+		    'label'    => __( 'Title:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_main_content_section',
+		    'settings' => 'cw_business_lite_frontpage_thecontent_title',
+			'priority' => 2,
+		) );
+
+		/* Main Content - Content */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thecontent_content', array('sanitize_callback' => 'esc_html','default' => __('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.','cw-business-lite')) );
+		$wp_customize->add_control( new cw_business_lite_Textarea_Control( $wp_customize, 'cw_business_lite_frontpage_thecontent_content', array(
+		            'label' 	=> __( 'The Content - Content:', 'cw-business-lite' ),
+		            'section' 	=> 'cw_business_lite_main_content_section',
+		            'settings' 	=> 'cw_business_lite_frontpage_thecontent_content',
+		            'priority' 	=> 3
+		        )
+		    )
+		);
+		
+		/** Clients **/
+		
+		$wp_customize->add_section( 'cw_business_lite_clients_section' , array(
+			'title'       => __( 'Clients area', 'cw-business-lite' ),
+			'priority'    => 4,
+			'panel' => 'cw_business_lite_frontpage_panel'
+		) );
+
+
+		/* Our Clients - Title */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_ourclients_title' , array('sanitize_callback' => 'esc_html','default' => __( 'Our Clients', 'cw-business-lite' )));
+		$wp_customize->add_control( 'cw_business_lite_frontpage_ourclients_title', array(
+		    'label'    => __( 'Title:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_clients_section',
+		    'settings' => 'cw_business_lite_frontpage_ourclients_title',
+			'priority' => 1,
+		) );
+
+		/* Our Clients - Logo 1 */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_ourclients_logo1', array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/logo_default.png'));
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_ourclients_logo1', array(
+		    'label'    => __( 'Logo 1:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_clients_section',
+		    'settings' => 'cw_business_lite_frontpage_ourclients_logo1',
+		    'priority' => 2,
+		) ) );
+
+		/* Our Clients - Logo 2 */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_ourclients_logo2', array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/logo_default.png') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_ourclients_logo2', array(
+		    'label'    => __( 'Logo 2:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_clients_section',
+		    'settings' => 'cw_business_lite_frontpage_ourclients_logo2',
+		    'priority' => 3,
+		) ) );
+
+		/* Our Clients - Logo 3 */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_ourclients_logo3' , array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/logo_default.png'));
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_ourclients_logo3', array(
+		    'label'    => __( 'Logo 3:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_clients_section',
+		    'settings' => 'cw_business_lite_frontpage_ourclients_logo3',
+		    'priority' => 4,
+		) ) );
+
+		/* Our Clients - Logo 4 */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_ourclients_logo4', array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/logo_default.png') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_ourclients_logo4', array(
+		    'label'    => __( 'Logo 4:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_clients_section',
+		    'settings' => 'cw_business_lite_frontpage_ourclients_logo4',
+		    'priority' => 5,
+		) ) );
+
+		/* Our Clients - Logo 5 */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_ourclients_logo5', array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/logo_default.png') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_ourclients_logo5', array(
+		    'label'    => __( 'Logo 5:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_clients_section',
+		    'settings' => 'cw_business_lite_frontpage_ourclients_logo5',
+		    'priority' => 6,
+		) ) );
+
+		/* Our Clients - Logo 6 */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_ourclients_logo6', array('sanitize_callback' => 'esc_url_raw','default' => get_template_directory_uri().'/images/logo_default.png') );
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cw_business_lite_frontpage_ourclients_logo6', array(
+		    'label'    => __( 'Logo 6:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_clients_section',
+		    'settings' => 'cw_business_lite_frontpage_ourclients_logo6',
+		    'priority' => 7,
+		) ) );
+	
+	else:
+		
+		$wp_customize->add_section( 'cw_business_lite_frontpage' , array(
+			'title'       => __( 'Front Page', 'cw-business-lite' ),
+			'priority'    => 40,
+		) );
 
 		/* Front Page - Header Title */
 		$wp_customize->add_setting( 'cw_business_lite_frontpage_header_title', array('sanitize_callback' => 'esc_html','default' => __( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'cw-business-lite' )) );
@@ -336,6 +564,8 @@ function cw_business_lite_customizer( $wp_customize ) {
 		    'settings' => 'cw_business_lite_frontpage_ourclients_logo6',
 		    'priority' => '19',
 		) ) );
+		
+	endif;	
 
 	/*
     ** Contact Customizer
