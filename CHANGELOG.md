@@ -1,5 +1,13 @@
 
 
+### 1.3.4 - 08/06/2015
+
+ Changes: 
+
+
+ * Fixed #9, organised customizer with panels for frontpage
+
+
 ### 1.3.3 - 27/04/2015
 
  Changes: 
