@@ -21,4 +21,8 @@ Roboto font
 License: Distributed under the terms of Apache License ( http://www.apache.org/licenses/LICENSE-2.0 )
 Copyright: Christian Robertson
 
+License: All unsplash.com images are licensed under the terms of the Creative Commons Zero, http://creativecommons.org/publicdomain/zero/1.0/
+
 * Screenshot image source: https://download.unsplash.com/3/doctype-hi-res.jpg
+
+* index-article-image.png source: https://download.unsplash.com/photo-1433769778268-24b797c4fc9a
