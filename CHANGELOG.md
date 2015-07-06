@@ -1,5 +1,13 @@
 
 
+### 1.3.5 - 06/07/2015
+
+ Changes: 
+
+
+ * Removed unused imaged and replaced non gpl images
+
+
 ### 1.3.4 - 08/06/2015
 
  Changes: 
