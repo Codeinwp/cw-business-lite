@@ -1,5 +1,13 @@
 
 
+### 1.3.7 - 21/10/2015
+
+ Changes: 
+
+
+ * Fixed #19, make features boxes clickable
+
+
 ### 1.3.6 - 16/07/2015
 
  Changes: 
