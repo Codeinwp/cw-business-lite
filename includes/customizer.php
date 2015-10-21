@@ -222,6 +222,14 @@ function cw_business_lite_customizer( $wp_customize ) {
 		        )
 		    )
 		);
+		
+		/* Features - Firstly Box - Link */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_firstlybox_link', array('sanitize_callback' => 'esc_url') );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_firstlybox_link', array(
+		    'label'    => __( 'Features Box (first) - Link:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_features_section',
+			'priority' => 4,
+		) );
 
 		/* Features - Secondly Box - Title */
 		$wp_customize->add_setting( 'cw_business_lite_frontpage_secondlybox_title', array('sanitize_callback' => 'esc_html', 'default' => __( '24/ 7 Support', 'cw-business-lite' )) );
@@ -229,7 +237,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'Features Box (two) - Title:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_features_section',
 		    'settings' => 'cw_business_lite_frontpage_secondlybox_title',
-			'priority' => 4,
+			'priority' => 5,
 		) );
 
 		/* Features - Secondly Box - Image */
@@ -238,10 +246,18 @@ function cw_business_lite_customizer( $wp_customize ) {
 		            'label' 	=> __( 'Features Box (two) - Image:', 'cw-business-lite' ),
 		            'section' 	=> 'cw_business_lite_features_section',
 		            'settings' 	=> 'cw_business_lite_frontpage_secondlybox_image',
-		            'priority' 	=> 5
+		            'priority' 	=> 6
 		        )
 		    )
 		);
+		
+		/* Features - Secondly Box - Link */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_secondlybox_link', array('sanitize_callback' => 'esc_url') );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_secondlybox_link', array(
+		    'label'    => __( 'Features Box (two) - Link:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_features_section',
+			'priority' => 7,
+		) );
 
 		/* Features - Thirdly Box - Title */
 		$wp_customize->add_setting( 'cw_business_lite_frontpage_thirdlybox_title', array('sanitize_callback' => 'esc_html','default' => __( '100% Satisfaction', 'cw-business-lite' )) );
@@ -249,7 +265,7 @@ function cw_business_lite_customizer( $wp_customize ) {
 		    'label'    => __( 'Features Box (three) - Title:', 'cw-business-lite' ),
 		    'section'  => 'cw_business_lite_features_section',
 		    'settings' => 'cw_business_lite_frontpage_thirdlybox_title',
-			'priority' => 6,
+			'priority' => 8,
 		) );
 
 		/* Features - Thirdly Box - Image */
@@ -258,10 +274,18 @@ function cw_business_lite_customizer( $wp_customize ) {
 		            'label' 	=> __( 'Features Box (three) - Image:', 'cw-business-lite' ),
 		            'section' 	=> 'cw_business_lite_features_section',
 		            'settings' 	=> 'cw_business_lite_frontpage_thirdlybox_image',
-		            'priority' 	=> 7
+		            'priority' 	=> 9
 		        )
 		    )
 		);
+		
+		/* Features - Thirdly Box - Link */
+		$wp_customize->add_setting( 'cw_business_lite_frontpage_thirdlybox_link', array('sanitize_callback' => 'esc_url') );
+		$wp_customize->add_control( 'cw_business_lite_frontpage_thirdlybox_link', array(
+		    'label'    => __( 'Features Box (three) - Link:', 'cw-business-lite' ),
+		    'section'  => 'cw_business_lite_features_section',
+			'priority' => 10,
+		) );
 		
 		/** Main content **/
 		
