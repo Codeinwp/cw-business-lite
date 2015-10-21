@@ -51,6 +51,12 @@ get_template_part( 'includes/subheader' ); ?>
 		<div class="features-two-container">
 			<div class="features-box">
 				<?php
+				$cw_business_lite_frontpage_firstlybox_link = get_theme_mod('cw_business_lite_frontpage_firstlybox_link');
+				
+				if( !empty($cw_business_lite_frontpage_firstlybox_link) ):
+					echo '<a href="'.$cw_business_lite_frontpage_firstlybox_link.'">';
+				endif;	
+				
 				if ( get_theme_mod( 'cw_business_lite_frontpage_firstlybox_image' ) ) {
 					echo '<div class="features-box-image"><img src="'. esc_url(get_theme_mod( 'cw_business_lite_frontpage_firstlybox_image' )) .'" alt="'. get_theme_mod( 'cw_business_lite_frontpage_firstlybox_title','Fast &amp; Safe' ) .'" title="'. get_theme_mod( 'cw_business_lite_frontpage_firstlybox_title',__('Fast &amp; Safe','cw-business-lite') ) .'" /></div>';
 				} else {
@@ -62,11 +68,20 @@ get_template_part( 'includes/subheader' ); ?>
 						echo get_theme_mod( 'cw_business_lite_frontpage_firstlybox_title',__('Fast &amp; Safe','cw-business-lite') );
 					echo '</h4>';
 				} 
+				if( !empty($cw_business_lite_frontpage_firstlybox_link) ):
+					echo '</a>';
+				endif;	
 				?>
 				
 			</div><!--/.features-box-->
 			<div class="features-box">
 				<?php
+				$cw_business_lite_frontpage_secondlybox_link = get_theme_mod('cw_business_lite_frontpage_secondlybox_link');
+				
+				if( !empty($cw_business_lite_frontpage_secondlybox_link) ):
+					echo '<a href="'.$cw_business_lite_frontpage_secondlybox_link.'">';
+				endif;
+				
 				if ( get_theme_mod( 'cw_business_lite_frontpage_secondlybox_image' ) ) {
 					echo '<div class="features-box-image"><img src="'. esc_url(get_theme_mod( 'cw_business_lite_frontpage_secondlybox_image' )) .'" alt="'. get_theme_mod( 'cw_business_lite_frontpage_secondlybox_title',__('24/ 7 Support','cw-business-lite') ) .'" title="'. get_theme_mod( 'cw_business_lite_frontpage_secondlybox_title',__('24/ 7 Support','cw-business-lite') ) .'" /></div>';
 				} else {
@@ -78,11 +93,21 @@ get_template_part( 'includes/subheader' ); ?>
 						echo get_theme_mod( 'cw_business_lite_frontpage_secondlybox_title',__('24/ 7 Support','cw-business-lite') );
 					echo '</h4>';	
 				}
+				
+				if( !empty($cw_business_lite_frontpage_secondlybox_link) ):
+					echo '</a>';
+				endif;
 				?>
 				
 			</div><!--/.features-box-->
 			<div class="features-box">
 				<?php
+				$cw_business_lite_frontpage_thirdlybox_link = get_theme_mod('cw_business_lite_frontpage_thirdlybox_link');
+				
+				if( !empty($cw_business_lite_frontpage_thirdlybox_link) ):
+					echo '<a href="'.$cw_business_lite_frontpage_thirdlybox_link.'">';
+				endif;
+				
 				if ( get_theme_mod( 'cw_business_lite_frontpage_thirdlybox_image' ) ) {
 					echo '<div class="features-box-image"><img src="'. esc_url(get_theme_mod( 'cw_business_lite_frontpage_thirdlybox_image' )) .'" alt="'. get_theme_mod( 'cw_business_lite_frontpage_thirdlybox_title',__('100% Satisfaction','cw-business-lite') ) .'" title="'. get_theme_mod( 'cw_business_lite_frontpage_thirdlybox_title',__('100% Satisfaction','cw-business-lite') ) .'" /></div>';
 				} else {
@@ -96,6 +121,12 @@ get_template_part( 'includes/subheader' ); ?>
 					}
 					?>
 				</h4>
+				
+				<?php
+				if( !empty($cw_business_lite_frontpage_thirdlybox_link) ):
+					echo '</a>';
+				endif;
+				?>
 			</div><!--/.features-box-->
 		</div><!--/.features-two-container-->
 	</div><!--/.wrap-->

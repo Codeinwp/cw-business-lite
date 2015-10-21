@@ -1107,7 +1107,10 @@ footer {
   font-size: 15px;
   text-align: center;
   text-transform: uppercase;
-  cursor: default;
+}
+.features-box a {
+	text-decoration:none;
+	float:left;
 }
 /* line 990, sass/style.scss */
 #features-two .features-box:hover h4 {
